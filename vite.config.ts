@@ -9,12 +9,12 @@ export default defineConfig({
     WindiCSS(),
     VitePWA({
       includeAssets: ["robots.txt"],
-      workbox: {
-        globPatterns: [
-          "**\/*.{js,css,html}",
-          "manifest.webmanifest",
-        ],
-      },
+      // workbox: {
+      //   globPatterns: [
+      //     "**\/*.{js,css,html}",
+      //     "manifest.webmanifest",
+      //   ],
+      // },
       manifest: {
         name: 'Solid app',
         short_name: 'Solid app',
