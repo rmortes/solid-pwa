@@ -2,6 +2,7 @@ import type { Component } from "solid-js";
 import { Link, useRoutes, useLocation } from "solid-app-router";
 
 import { routes } from "./routes";
+import ReloadPrompt from "./reload-prompt";
 
 const App: Component = () => {
   const location = useLocation();
@@ -42,6 +43,7 @@ const App: Component = () => {
       <main>
         <Route />
       </main>
+      <ReloadPrompt />
     </>
   );
 };
