@@ -9,35 +9,29 @@ export default defineConfig({
     WindiCSS(),
     VitePWA({
       includeAssets: ["robots.txt"],
-      // workbox: {
-      //   globPatterns: [
-      //     "**\/*.{js,css,html}",
-      //     "manifest.webmanifest",
-      //   ],
-      // },
       manifest: {
         name: 'Solid app',
         short_name: 'Solid app',
         description: 'Solid app',
         theme_color: '#ffffff',
-        // icons: [
-        //   {
-        //     src: 'pwa-192x192.png',
-        //     sizes: '192x192',
-        //     type: 'image/png',
-        //   },
-        //   {
-        //     src: 'pwa-512x512.png',
-        //     sizes: '512x512',
-        //     type: 'image/png',
-        //   },
-        //   {
-        //     src: 'pwa-512x512.png',
-        //     sizes: '512x512',
-        //     type: 'image/png',
-        //     purpose: 'any maskable',
-        //   }
-        // ]
+        icons: [
+          {
+            src: 'pwa-192x192.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+          {
+            src: 'pwa-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+          },
+          {
+            src: 'pwa-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'any maskable',
+          }
+        ]
       }
     })
   ],
