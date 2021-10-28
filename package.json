@@ -5,10 +5,13 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build-auto": "cross-env CLAIMS=true vite build",
     "serve": "vite preview"
   },
   "license": "MIT",
   "devDependencies": {
+    "@rollup/plugin-replace": "^3.0.0",
+    "cross-env": "^7.0.3",
     "vite": "^2.5.7",
     "vite-plugin-pwa": "^0.11.3",
     "vite-plugin-solid": "^2.0.3",

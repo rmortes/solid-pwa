@@ -2,12 +2,14 @@ import { defineConfig } from "vite";
 import solidPlugin from "vite-plugin-solid";
 import WindiCSS from "vite-plugin-windicss";
 import { VitePWA } from "vite-plugin-pwa";
+import replace from "@rollup/plugin-replace";
 
 export default defineConfig({
   plugins: [
     solidPlugin(),
     WindiCSS(),
     VitePWA({
+      registerType: process.env.CLAIMS === 'true' ? 'autoUpdate' : undefined,
       includeAssets: ["robots.txt"],
       manifest: {
         name: 'Solid app',
@@ -33,7 +35,10 @@ export default defineConfig({
           }
         ]
       }
-    })
+    }),
+    replace({
+      __DATE__: new Date().toISOString(),
+    }),
   ],
   build: {
     target: "esnext",
